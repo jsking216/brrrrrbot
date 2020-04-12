@@ -15,11 +15,16 @@ type WSBBot struct {
 }
 
 func (r *WSBBot) Comment(p *reddit.Comment) error {
-	matched, _ := regexp.MatchString(`(.*?\d){3, }`, p.Body)
+	fmt.Println(fmt.Sprintf("Examining comment body: %s", p.Body))
+	matched, _ := regexp.MatchString(`(.*?\d){3}`, p.Body)
 	if strings.Contains(p.Body, "SPY") && matched {
-		<-time.After(10 * time.Second)
-		fmt.Println(fmt.Sprintf("Replying to comment body: %s at link %s", p.Body, p.Permalink))
-		return r.bot.Reply(p.Name, "Money printer go BRRRBRRRBRRR")
+		<-time.After(1 * time.Second)
+		fmt.Println(fmt.Sprintf("REPLYING to comment body: %s at link %s", p.Body, p.Permalink))
+		err := r.bot.Reply(p.Name, "Money printer go BRRRBRRRBRRR")
+		if err != nil {
+			fmt.Println(fmt.Sprintf("Failed to reply to comment due to error: %s", err.Error()))
+			return err
+		}
 	}
 	return nil
 }

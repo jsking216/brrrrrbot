@@ -1,0 +1,28 @@
+# github.com/golang/protobuf v1.3.2
+github.com/golang/protobuf/proto
+# github.com/mitchellh/mapstructure v1.1.2
+github.com/mitchellh/mapstructure
+# github.com/turnage/graw v0.0.0-20200404033202-65715eea1cd0
+github.com/turnage/graw
+github.com/turnage/graw/botfaces
+github.com/turnage/graw/reddit
+github.com/turnage/graw/streams
+github.com/turnage/graw/streams/internal/monitor
+github.com/turnage/graw/streams/internal/rsort
+# github.com/turnage/redditproto v0.0.0-20151223012412-afedf1b6eddb
+github.com/turnage/redditproto
+# golang.org/x/net v0.0.0-20191209160850-c0dbc17a3553
+golang.org/x/net/context
+golang.org/x/net/context/ctxhttp
+# golang.org/x/oauth2 v0.0.0-20191202225959-858c2ad4c8b6
+golang.org/x/oauth2
+golang.org/x/oauth2/clientcredentials
+golang.org/x/oauth2/internal
+# google.golang.org/appengine v1.4.0
+google.golang.org/appengine/internal
+google.golang.org/appengine/internal/base
+google.golang.org/appengine/internal/datastore
+google.golang.org/appengine/internal/log
+google.golang.org/appengine/internal/remote_api
+google.golang.org/appengine/internal/urlfetch
+google.golang.org/appengine/urlfetch
