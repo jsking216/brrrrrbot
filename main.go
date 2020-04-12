@@ -36,7 +36,16 @@ func main() {
 		return
 	}
 
-	cfg := graw.Config{SubredditComments: []string{"wallstreetbets"}}
+	subredditsToWatch := []string{
+		"wallstreetbets",
+		"robinhood",
+		"options",
+		"investing",
+		"thewallstreet",
+		"tradevol",
+	}
+
+	cfg := graw.Config{SubredditComments: subredditsToWatch}
 	handler := &WSBBot{bot: bot}
 
 	if _, wait, err := graw.Run(handler, bot, cfg); err != nil {
