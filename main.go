@@ -10,11 +10,11 @@ import (
 	"github.com/turnage/graw/reddit"
 )
 
-type WSBBot struct {
+type BrrrrrBot struct {
 	bot reddit.Bot
 }
 
-func (r *WSBBot) Comment(p *reddit.Comment) error {
+func (r *BrrrrrBot) Comment(p *reddit.Comment) error {
 	fmt.Println(fmt.Sprintf("Examining comment body: %s", p.Body))
 	matched, _ := regexp.MatchString(`(.*?\d){3}`, p.Body)
 	if strings.Contains(p.Body, "SPY") && matched {
@@ -46,7 +46,7 @@ func main() {
 	}
 
 	cfg := graw.Config{SubredditComments: subredditsToWatch}
-	handler := &WSBBot{bot: bot}
+	handler := &BrrrrrBot{bot: bot}
 
 	if _, wait, err := graw.Run(handler, bot, cfg); err != nil {
 		fmt.Println("Failed to start graw run: ", err)
