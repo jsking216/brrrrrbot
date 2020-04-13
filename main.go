@@ -37,7 +37,6 @@ func main() {
 	}
 
 	subredditsToWatch := []string{
-		"wallstreetbets",
 		"robinhood",
 		"options",
 		"investing",
